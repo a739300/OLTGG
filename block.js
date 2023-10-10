@@ -429,11 +429,11 @@ const blocks = [
 		],
 		def: [
 			{
-				type: 'text',
+				type: 'number',
 				params: [1]
 			},
 			{
-				type: 'text',
+				type: 'number',
 				params: [2]
 			},
 			null
