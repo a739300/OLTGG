@@ -406,17 +406,13 @@ const blocks = [
 	},
 	{
 		name: 'ExpressBlock_OpenUrl',
-		template: '%1 사이트 %2 열기(일반)%3',
+		template: '%1 사이트 열기(일반)%2',
 		skeleton: 'basic',
 		color: {
 			default: '#15b01a',
 			darken: '#15b01a'
 		},
 		params: [
-			{
-				type: 'Block',
-				accept: 'string'
-			},
 			{
 				type: 'Block',
 				accept: 'string'
