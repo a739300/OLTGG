@@ -387,7 +387,7 @@ const blocks = [
 	{
 		name: 'ExpressBlock_Webblocks',
 		template: '%1',
-		skeleton: 'basic_text',
+		skeleton: '토글기능',
 		color: {
 			default: EntryStatic.colorSet.common.TRANSPARENT,
 			darken: EntryStatic.colorSet.common.TRANSPARENT
@@ -395,7 +395,7 @@ const blocks = [
 		params: [
 			{
 				type: 'Text',
-				text: '토글 기능',
+				text: 'OTL Toggle V1',
 				color: EntryStatic.colorSet.common.TEXT,
 				align: 'center'
 			}
@@ -406,7 +406,7 @@ const blocks = [
 	},
 	{
 		name: 'ExpressBlock_OpenUrl',
-		template: '%1 사이트 열기(일반)%2',
+		template: '%1 %2 사이트 열기(일반)%3',
 		skeleton: 'basic',
 		color: {
 			default: '#15b01a',
@@ -415,7 +415,11 @@ const blocks = [
 		params: [
 			{
 				type: 'Block',
-				accept: 'string'
+				accept: 'int'
+			},
+			{
+				type: 'Block',
+				accept: 'int'
 			},
 			{
 				type: 'Indicator',
@@ -440,7 +444,7 @@ const blocks = [
 		},
 	},
 	{
-		name: 'OLTGG Plugin',
+		name: 'ExpressBlock_Webblocks',
 		template: '%1',
 		skeleton: 'basic_text',
 		color: {
@@ -450,9 +454,8 @@ const blocks = [
 		params: [
 			{
 				type: 'Text',
-				text: 'OTLGG 0.1V',
+				text: 'OTL Toggle v0.1',
 				color: EntryStatic.colorSet.common.TEXT,
-				class: 'bold',
 				align: 'center'
 			}
 		],
@@ -461,9 +464,11 @@ const blocks = [
 		class: 'text'
 	}
 ]
+// 블럭 불러오기
+LibraryCreator.start(blocks, 'API', '특급');
 // 리뉴얼 이전 장면 1 로드 함수
 async function ExpressBlockLoad() {
-	if(Entry.getMainWS() && Entry.projectId) {
+	if (Entry.getMainWS() && Entry.projectId) {
 		const TempProjectId = Entry.projectId;
 		const ExportedProject = Entry.exportProject();
 		const ProjectData = await (await fetch(`https://playentry.org/api/project/${Entry.projectId}`)).json();
@@ -477,7 +482,7 @@ async function ExpressBlockLoad() {
 }
 // 리뉴얼 이후 장면 1 로드 함수
 async function ExpressBlockLoadNew() {
-	if(Entry.getMainWS() && Entry.projectId) {
+	if (Entry.getMainWS() && Entry.projectId) {
 		const TempProjectId = Entry.projectId;
 		const ExportedProject = Entry.exportProject();
 		const ProjectData = (await (await await fetch('https://playentry.org/graphql', {
@@ -487,7 +492,7 @@ async function ExpressBlockLoadNew() {
 			},
 			body: JSON.stringify({
 				query:
-				` query SELECT_PROJECT($id: ID! $groupId: ID) {
+					` query SELECT_PROJECT($id: ID! $groupId: ID) {
 					project(id: $id, groupId: $groupId) {
 						id
 						name
