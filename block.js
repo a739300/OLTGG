@@ -419,7 +419,7 @@ const blocks = [
 			},
 			{
 				type: 'Indicator',
-				img: 'images/icon.svg',
+				img: 'block_icon/start_icon_play.svg',
 				size: 11,
 			}
 		],
