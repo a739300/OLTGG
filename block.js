@@ -395,7 +395,7 @@ const blocks = [
 		params: [
 			{
 				type: 'Text',
-				text: 'OLT 기능',
+				text: '토글 기능',
 				color: EntryStatic.colorSet.common.TEXT,
 				align: 'center'
 			}
@@ -406,7 +406,7 @@ const blocks = [
 	},
 	{
 		name: 'ExpressBlock_OpenUrl',
-		template: '%1 사이트 열기(일반)%2',
+		template: '%1 %3 사이트 열기(일반)%2',
 		skeleton: 'basic',
 		color: {
 			default: '#15b01a',
@@ -419,7 +419,7 @@ const blocks = [
 			},
 			{
 				type: 'Indicator',
-				img: 'block_icon/start_icon_play.svg',
+				img: 'images/icon.svg',
 				size: 11,
 			}
 		],
@@ -427,6 +427,10 @@ const blocks = [
 			{
 				type: 'text',
 				params: ['https://playentry.org']
+			},
+			{
+				type: 'text',
+				params: ['Test']
 			},
 			null
 		],
@@ -461,7 +465,6 @@ const blocks = [
 		class: 'text'
 	}
 ]
-
 // 리뉴얼 이전 장면 1 로드 함수
 async function ExpressBlockLoad() {
 	if(Entry.getMainWS() && Entry.projectId) {
@@ -622,5 +625,5 @@ async function ExpressBlockLoadNew() {
 // 오류로 잠시 중단
 // ExpressBlockLoad();
 ExpressBlockLoadNew();
-console.log('%cExpress Block(특급블록) 5.3 기반으로 제작된 OLTGG(Only Toggle Plugin)%c\n\nOLTGG를 이용해주셔서 감사합니다.\n인천학생SW캠프용으로 제작되었습니다', 'font-family: 맑은 고딕; color: #ffffff; background-color: #66AA33; border-radius: 10px; font-size: 26px; padding : 20px 30px', 'color: #000000; background-color: #FFFFFF; font-size: 18px;', 'color: #000000; background-color: #FFFFFF; font-size: 16px;');
+console.log('%cOLTGG(Only Toggle Plugin)%c\n\nOLTGG를 이용해주셔서 감사합니다.\n인천학생SW캠프용으로 제작되었습니다', 'font-family: 맑은 고딕; color: #ffffff; background-color: #66AA33; border-radius: 10px; font-size: 26px; padding : 20px 30px', 'color: #000000; background-color: #FFFFFF; font-size: 18px;', 'color: #000000; background-color: #FFFFFF; font-size: 16px;');
 // alert('엔트리 리뉴얼로 JSON 등의 일부 블럭은 작동하지 않습니다.');
