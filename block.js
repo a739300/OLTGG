@@ -415,11 +415,11 @@ const blocks = [
 		params: [
 			{
 				type: 'Block',
-				accept: 'int'
+				accept: 'string'
 			},
 			{
 				type: 'Block',
-				accept: 'int'
+				accept: 'string'
 			},
 			{
 				type: 'Indicator',
@@ -430,7 +430,11 @@ const blocks = [
 		def: [
 			{
 				type: 'text',
-				params: ['https://playentry.org']
+				params: ['T1']
+			},
+			{
+				type: 'text',
+				params: ['T2']
 			},
 			null
 		],
