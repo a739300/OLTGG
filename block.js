@@ -415,11 +415,11 @@ const blocks = [
 		params: [
 			{
 				type: 'Block',
-				accept: 'string'
+				accept: 'int'
 			},
 			{
 				type: 'Block',
-				accept: 'string'
+				accept: 'int'
 			},
 			{
 				type: 'Indicator',
@@ -430,11 +430,11 @@ const blocks = [
 		def: [
 			{
 				type: 'text',
-				params: ['T1']
+				params: [1]
 			},
 			{
 				type: 'text',
-				params: ['T2']
+				params: [2]
 			},
 			null
 		],
