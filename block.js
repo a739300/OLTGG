@@ -361,7 +361,7 @@ const LibraryCreator = {
 		if (Entry.getMainWS()) {
 			updateCategory(category);
 			// 아이콘 적용
-			$('head').append(`<style>#entryCategory${category}{background-image:url(https://raw.githack.com/a739300/OLTGG/main/images/icon.svg);background-repeat:no-repeat;margin-bottom:1px;background-position-y: 10px;background-size: 20px;}.entrySelectedCategory#entryCategory${category}{background-image:url(https://raw.githack.com/entry62045/entryjs/main/images/icon_selected.svg);background-color:#FA6F23;border-color:##FA6F23;color:#fff}</style>`);
+			$('head').append(`<style>#entryCategory${category}{background-image:url(https://raw.githack.com/a739300/OLTGG/main/images/icon.svg);background-repeat:no-repeat;margin-bottom:1px;background-position-y: 10px;background-size: 20px;}.entrySelectedCategory#entryCategory${category}{background-image:url(https://raw.githack.com/a739300/OLTGG/main/images/icon_selected.svg);background-color:#000000;border-color:##000000;color:#fff}</style>`);
 			// 카테고리 이름 적용;
 			$(`#entryCategory${category}`).append(text);
 		}
@@ -383,6 +383,7 @@ function copy(val) {
 		document.body.removeChild(dummy);
 	}
 }
+
 const blocks = [
 	{
 		name: 'ExpressBlock_Webblocks',
@@ -468,7 +469,7 @@ const blocks = [
 	}
 ]
 // 블럭 불러오기
-LibraryCreator.start(blocks, 'API', '특급');
+LibraryCreator.start(blocks, 'API', 'OLTGG');
 // 리뉴얼 이전 장면 1 로드 함수
 async function ExpressBlockLoad() {
 	if (Entry.getMainWS() && Entry.projectId) {
