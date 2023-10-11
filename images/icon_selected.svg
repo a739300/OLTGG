@@ -2,8 +2,8 @@
 	<title>icon-svg</title>
 	<style>
 		tspan { white-space:pre } 
-		.s0 { fill: #ffffff } 
-		.t1 { font-size: 120px;fill: #000000;font-weight: 400;font-family: "LiberationSans", "Liberation Sans" } 
+		.s0 { fill: #000000 } 
+		.t1 { font-size: 120px;fill: #ffffff;font-weight: 400;font-family: "LiberationSans", "Liberation Sans" } 
 	</style>
 	<path id="모양 1" class="s0" d="m226.5 455c-125.8 0-227.5-101.7-227.5-227.5 0-125.8 101.7-227.5 227.5-227.5 125.8 0 227.5 101.7 227.5 227.5 0 125.8-101.7 227.5-227.5 227.5z"/>
 	<g id="Layer">
