@@ -386,7 +386,7 @@ function copy(val) {
 
 const blocks = [
 	{
-		name: 'ExpressBlock_Webblocks',
+		name: 'ToggleTitle',
 		template: '%1',
 		skeleton: '토글기능',
 		color: {
@@ -396,7 +396,7 @@ const blocks = [
 		params: [
 			{
 				type: 'Text',
-				text: 'OTL Toggle V1',
+				text: 'Toggle',
 				color: EntryStatic.colorSet.common.TEXT,
 				align: 'center'
 			}
@@ -407,7 +407,7 @@ const blocks = [
 	},
 	{
 		name: 'ExpressBlock_OpenUrl',
-		template: '%1 %2 사이트 열기(일반)%3',
+		template: '%1 Input %2 Output Toggle %3',
 		skeleton: 'basic',
 		color: {
 			default: '#15b01a',
@@ -444,6 +444,10 @@ const blocks = [
 		},
 		class: 'text',
 		func: async (sprite, script) => {
+			
+			Entry.variableContainer.getVariableByName(script.getValue('ENTRYVARNAME', script)).value_ = 13
+
+
 
 		},
 	},
@@ -458,7 +462,7 @@ const blocks = [
 		params: [
 			{
 				type: 'Text',
-				text: 'OTL Toggle v0.1',
+				text: 'OLT Toggle v0.1',
 				color: EntryStatic.colorSet.common.TEXT,
 				align: 'center'
 			}
@@ -632,3 +636,19 @@ async function ExpressBlockLoadNew() {
 ExpressBlockLoadNew();
 console.log('%cOLTGG(Only Toggle Plugin)%c\n\nOLTGG를 이용해주셔서 감사합니다.\n인천학생SW캠프용으로 제작되었습니다', 'font-family: 맑은 고딕; color: #ffffff; background-color: #66AA33; border-radius: 10px; font-size: 26px; padding : 20px 30px', 'color: #000000; background-color: #FFFFFF; font-size: 18px;', 'color: #000000; background-color: #FFFFFF; font-size: 16px;');
 // alert('엔트리 리뉴얼로 JSON 등의 일부 블럭은 작동하지 않습니다.');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
