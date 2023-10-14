@@ -449,14 +449,16 @@ const blocks = [
                 
             if(inputV == '1'){
                 if(temp == 0){
-                    if(ResultV == '1'){
+                    if(Output == '1'){
                         temp = 1;
                         console.log("Return 0");
+			Output = 0;
                         return 0;
                     }
-                    if(ResultV == '0'){
+                    if(Output == '0'){
                         temp = 1;
                         console.log("Return 1");
+			Output = 1;
                         return 1;
                     }
                 }
@@ -466,6 +468,7 @@ const blocks = [
                 temp = 0;
                 console.log("Return R");
                 var RI = script.getNumberValue('ResultValue', script);
+		Output = Output;
                 return RI;
             }
             
@@ -652,5 +655,6 @@ async function ExpressBlockLoadNew() {
 	}
 }
 var temp;
+var Output = 0;
 ExpressBlockLoadNew();
 console.log('<b>인천해커톤SW캠프용 OLTGG(OnlyToggle) 비공식 확장블럭 기능입니다.</b>');
